@@ -5,27 +5,30 @@
 </head>
 <body>
   <header>
-    <h1>Number Guesser</h1>
+    <h1><span class="title-pink">Number</span><span class="title-gray">Guesser</span></h1>
   </header>
 
   <div class='guess-box'>
-    <input type="number">
-  <div>
-    <button id="guess">Guess</button>
-    <button id="clear">Clear</button>
-  </div>
+    <input type="number" class="guess-input" placeholder="Enter a guess">
+
+    <div>
+      <button id="guess">Guess</button>
+      <button id="clear">Clear</button>
+    </div>
+
     <div class="last-guess-box">
       <div>
-        <p>Your last guess was</p>
+        <h2>Your last guess was</h2>
       </div>
       <div>
-        <p id="last-guess"></p>
+        <p class="last-guess"></p>
       </div>
       <div>
-        <p id="feedback"></p>
+        <p class="feedback"></p>
+        <h2>That is to high</h2>
       </div>
     </div>
-    <button id="reset">Reset</button>
+    <button class="reset-button">Reset</button>
   <div>
 
   <script>
