@@ -26,6 +26,11 @@ header {
   flex-direction: row;
   justify-content: center;
 }
+.game-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 .guess-box {
   display: flex;
@@ -103,4 +108,11 @@ h2 {
 .reset-button {
   width: 424px;
   margin-bottom: 70px;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
