@@ -7,9 +7,16 @@
   <header>
     <h1><span class="title-pink">Number</span><span class="title-gray">Guesser</span></h1>
   </header>
-
+  <div class="range-title">
+    <p id="range-info"> Enter a range for your guess to begin!</p>
+  </div>
+<div class="range-box">
+  <input type="number" id="min-range-input" placeholder="min">
+  <input type="number" id="max-range-input" placeholder="max">
+    <button id="range-button">Submit</button>
+</div>
   <div class='guess-box'>
-    <input type="number" id="guess-input" placeholder="Enter a guess">
+    <input type="number" id="guess-input" placeholder="Enter your guess">
 
     <div>
       <button id="guess">Guess</button>
@@ -18,7 +25,7 @@
 
     <div class="last-guess-box">
       <div>
-        <h2>Your last guess was</h2>
+        <h2 id="guess-was"></h2>
       </div>
       <div>
         <p id="last-guess"></p>
@@ -28,7 +35,7 @@
 
       </div>
     </div>
-    <button class="reset-button">Reset</button>
+    <button id="reset-button">Reset</button>
   <div>
 
   <script src="guess.js"></script>
