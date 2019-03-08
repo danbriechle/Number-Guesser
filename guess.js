@@ -3,7 +3,9 @@
   var max = 0
 
   function numberCreator() {
-    return (Math.floor(Math.random() * (max -= min)+ 1));
+    min = Math.ceil(min);
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   function guessValidator(userGuess) {
@@ -30,7 +32,7 @@
 
   function checkGuess(userGuess) {
    if (userGuess === correctNumber) {
-    min -= 10
+    min = (min -10)
     max += 10
     document.getElementById('guess-was').innerHTML = (`Your last guess was`);
     document.getElementById('last-guess').innerHTML = (`${userGuess}`);
@@ -52,9 +54,9 @@
 
   document.getElementById("guess").addEventListener("click", () => {
     let userGuess = parseInt(document.getElementById('guess-input').value, 10);
-     if (guessValidator(userGuess)) { return true; }
-     checkGuess(userGuess);
-     console.log(correctNumber)
+    if (guessValidator(userGuess)) { return true; }
+    checkGuess(userGuess);
+    console.log(correctNumber)
   });
 
   document.getElementById("range-button").addEventListener("click", () => {
@@ -63,6 +65,7 @@
     if (rangeValidator(min)) { return true;}
     if (rangeValidator(max)) { return true;}
     correctNumber += numberCreator();
+    console.log(correctNumber)
   });
 
   document.getElementById("clear").addEventListener("click", () => {
